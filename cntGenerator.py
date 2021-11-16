@@ -30,7 +30,7 @@ def helicity(n, m):
     return np.arctan( m / (a * (2 * n + m)) )
 
 '''
-Define the diameter of the carbon nanotube
+Define the radius of the carbon nanotube
 '''
 
 def radius(n, m):
@@ -51,7 +51,7 @@ def basisOne(n, m):
     z10 = -j * a * np.sin(alpha)# z values
     x11 = x10 - (a/c) * np.cos(b - alpha)
     z11 = z10 - (a/c) * np.sin(b - alpha)
-    y10.append( [x10, z10] )
+    y10.append([x10, z10])
     y11.append([x11, z11])
     return [y10, y11]
 
@@ -84,4 +84,22 @@ def basisThree(n, m):
     y30.append([x30, z30])
     y31.append([x31, z31])
     return [y30, y31]
+
+'''
+Now, with those basis vectors defined, we can begin to place them on a
+circle.
+
+Assume that a single unit cell is lying on a circle. Since the circumference
+of a circle is C = [pi] * diameter, we can therefore assume that the
+nanotube's circumference is
+C = 2[pi] * radius = (1/2) * a * sqrt(n^2 + nm + m^2)
+'''
+
+def circumference(n, m):
+    return 0.5 * a * np.sqrt(n**2 + n * m + m**2)
+
+'''
+This then allows us to put our unit cels onto a circle with an inscribed
+triangle problem.
+'''
 
