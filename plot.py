@@ -23,17 +23,3 @@ def extractY(l, k):
 n = 10
 m = 10
 
-x = []
-y = []
-
-a = basisOne(n, m)
-
-for i in len( extractX(a, 0) ):
-
-x.append( extractX(a, 0) )
-y.append( extractY(a, 0) )
-
-
-#plt.scatter(x, y)
-#plt.savefig('plot.png')
-
