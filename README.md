@@ -1,3 +1,13 @@
+This project has been archived. Kwant is not necessarily equiped for
+making systems like carbon nanotubes without considering finagling,
+so I'm stopping this for now.
+
+Eventually I'll get back and make a more generalized version of this
+program---perhaps a way to put QuantumEspresso inputs into kwant
+or something.
+
+---
+
 # Carbon nanotube generator
 
 This is a little python script to generate single-walled carbon nanotubes
